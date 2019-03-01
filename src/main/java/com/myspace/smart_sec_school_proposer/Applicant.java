@@ -23,6 +23,9 @@ public class Applicant implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Gender")
 	private String gender;
 
+	@org.kie.api.definition.type.Label(value = "CCA")
+	private java.util.List<java.lang.String> cca;
+
 	public Applicant() {
 	}
 
@@ -82,10 +85,18 @@ public class Applicant implements java.io.Serializable {
 		this.gender = gender;
 	}
 
+	public java.util.List<java.lang.String> getCca() {
+		return this.cca;
+	}
+
+	public void setCca(java.util.List<java.lang.String> cca) {
+		this.cca = cca;
+	}
+
 	public Applicant(java.lang.String name, java.lang.Integer postal_Code,
 			java.lang.String transport_Mode, java.lang.Integer t_score,
 			java.lang.String motherTongue, java.lang.String residence_Status,
-			java.lang.String gender) {
+			java.lang.String gender, java.util.List<java.lang.String> cca) {
 		this.name = name;
 		this.postal_Code = postal_Code;
 		this.transport_Mode = transport_Mode;
@@ -93,6 +104,7 @@ public class Applicant implements java.io.Serializable {
 		this.motherTongue = motherTongue;
 		this.residence_Status = residence_Status;
 		this.gender = gender;
+		this.cca = cca;
 	}
 
 }
